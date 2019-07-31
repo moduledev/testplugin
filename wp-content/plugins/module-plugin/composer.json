@@ -1,0 +1,13 @@
+{
+    "name": "sergey/module-plugin",
+    "authors": [
+        {
+            "name": "lion1121",
+            "email": "bayduzh89@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"Inc\\": "./inc"}
+    }
+}
