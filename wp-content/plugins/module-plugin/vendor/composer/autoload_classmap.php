@@ -6,4 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Inc\\Base\\Activate' => $baseDir . '/inc/Base/Activate.php',
+    'Inc\\Base\\Deactivate' => $baseDir . '/inc/Base/Deactivate.php',
+    'Inc\\Init' => $baseDir . '/inc/Init.php',
+    'Inc\\Pages\\Admin' => $baseDir . '/inc/Pages/Admin.php',
 );
