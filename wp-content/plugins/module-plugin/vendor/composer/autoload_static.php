@@ -23,6 +23,8 @@ class ComposerStaticInit00d2c454e586de7ef24ca70b2dad8a20
     public static $classMap = array (
         'Inc\\Base\\Activate' => __DIR__ . '/../..' . '/inc/Base/Activate.php',
         'Inc\\Base\\Deactivate' => __DIR__ . '/../..' . '/inc/Base/Deactivate.php',
+        'Inc\\Base\\Enqueue' => __DIR__ . '/../..' . '/inc/Base/Enqueue.php',
+        'Inc\\Base\\SettingsLink' => __DIR__ . '/../..' . '/inc/Base/SettingsLink.php',
         'Inc\\Init' => __DIR__ . '/../..' . '/inc/Init.php',
         'Inc\\Pages\\Admin' => __DIR__ . '/../..' . '/inc/Pages/Admin.php',
     );

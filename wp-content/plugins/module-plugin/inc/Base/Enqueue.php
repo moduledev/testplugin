@@ -11,7 +11,7 @@ class Enqueue
     public function enqueue()
     {
         // Enqueue all scripts
-        wp_enqueue_style('plugstyle', SCRIPTS_PATH . '/assets/style.css');
-        wp_enqueue_script('plugscript', SCRIPTS_PATH . '/assets/script.js');
+        wp_enqueue_style('plugstyle', PLUGIN_URL . '/assets/style.css');
+        wp_enqueue_script('plugscript', PLUGIN_URL . '/assets/script.js');
     }
 }
