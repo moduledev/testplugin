@@ -8,6 +8,9 @@ class Enqueue
         add_action('admin_enqueue_scripts', [$this, 'enqueue']);
     }
 
+    /**
+     * Added custom css,js to admin dashboard
+     */
     public function enqueue()
     {
         // Enqueue all scripts
