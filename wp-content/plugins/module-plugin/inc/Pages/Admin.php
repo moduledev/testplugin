@@ -31,7 +31,7 @@ class Admin extends BaseController
         ];
         $this->subpages = [
             [
-                'parent_slug' => 'Module Plugin',
+                'parent_slug' => 'module_plugin',
                 'page_title' => 'Suct post type',
                 'menu_title' => 'CTP',
                 'capability' => 'manage_options',
@@ -41,7 +41,7 @@ class Admin extends BaseController
                 },
             ],
             [
-                'parent_slug' => 'Module Plugin',
+                'parent_slug' => 'module_plugin',
                 'page_title' => 'Suct post type',
                 'menu_title' => 'Taxonomies',
                 'capability' => 'manage_options',
@@ -51,7 +51,7 @@ class Admin extends BaseController
                 },
             ],
             [
-                'parent_slug' => 'Module Plugin',
+                'parent_slug' => 'module_plugin',
                 'page_title' => 'Suct post type',
                 'menu_title' => 'Widjets',
                 'capability' => 'manage_options',

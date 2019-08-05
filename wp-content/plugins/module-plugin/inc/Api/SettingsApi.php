@@ -30,12 +30,12 @@ class SettingsApi
         $admin_page = $this->admin_pages[0];
         $subPages =  [
             [
-                'parent_slug' => $admin_page['menu_slug'],
-                'page_title' => $admin_page['page_title'],
-                'menu_title' =>  $title ?? $admin_page['menu_title'],
-                'capability' => $admin_page['capability'],
-                'menu_slug' => $admin_page['menu_slug'],
-                'callback' => $admin_page['callback'],
+                'parent_slug' => $admin_page['menu_slug'], 
+				'page_title' => $admin_page['page_title'], 
+				'menu_title' => ($title) ? $title : $admin_page['menu_title'], 
+				'capability' => $admin_page['capability'], 
+				'menu_slug' => $admin_page['menu_slug'], 
+				'callback' => $admin_page['callback']
             ],
         ];
 
@@ -58,9 +58,6 @@ class SettingsApi
         foreach ($this->admin_subpages as $page) {
             add_submenu_page($page['parent_slug'], $page['page_title'], $page['menu_title'], $page['capability'], $page['menu_slug'], $page['callback']);
         }
-        
-        echo '<pre>';
-        print_r($this->admin_subpages);
-        echo '</pre>';
+    
     }
 }
