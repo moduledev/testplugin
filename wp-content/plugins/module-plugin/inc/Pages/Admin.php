@@ -26,6 +26,10 @@ class Admin extends BaseController
     {
         $this->setPages();
         $this->setSubPages();
+        $this->setSettings();
+        $this->setSections();
+        $this->setFields();
+
         $this->settings->addPages($this->pages)->withSubPage('Dashboard')->addSubPages($this->subpages)->register();
     }
 
@@ -73,5 +77,64 @@ class Admin extends BaseController
                 'callback' => [$this->callbacks,'widjetDashboard'],
             ],
         ];
+    }
+
+    public function setSettings()
+    {
+        $args = [
+            [
+                'option_group' => 'module_option_group',
+                'option_name' => 'text_example',
+                'callback' => [$this->callbacks, 'ModuleOptionsGroup'], 
+            ],
+            [
+                'option_group' => 'module_option_group',
+                'option_name' => 'first_name',
+            ],
+        ];
+        $this->settings->setSettings($args);
+    }
+
+    public function setSections()
+    {
+        $args = [
+            [
+                'id' => 'module_admin_index',
+                'title' => 'Settings',
+                'callback' => [$this->callbacks, 'moduleAdminSection'], 
+                'page' => 'module_plugin',
+            ],
+            
+        ];
+        $this->settings->setSections($args);
+    }
+
+    public function setFields()
+    {
+        $args = [
+            [
+                'id' => 'text_example',
+                'title' => 'Text example',
+                'callback' => [$this->callbacks, 'moduleTextExample'], 
+                'page' => 'module_plugin',
+                'section' => 'module_admin_index',
+                'args' => [
+                    'label_for' => 'text_example',
+                    'class' => 'example_class'
+                ],    
+            ],
+            [
+                'id' => 'first_name',
+                'title' => 'First Name',
+                'callback' => [$this->callbacks, 'moduleFirstName'], 
+                'page' => 'module_plugin',
+                'section' => 'module_admin_index',
+                'args' => [
+                    'label_for' => 'first_name',
+                    'class' => 'example_class'
+                ],    
+            ],
+        ];
+        $this->settings->setFields($args);
     }
 }
